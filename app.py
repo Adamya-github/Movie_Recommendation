@@ -4,8 +4,8 @@ import joblib
 app = Flask(__name__)
 
 # Load data and model
-df = joblib.load('D:\Machine learning\movie_recommendation_system\model\movies_df.pkl')
-cosine_sim = joblib.load('D:\Machine learning\movie_recommendation_system\model\cosine_sim.pkl')
+df = joblib.load('/model/movies_df.pkl')
+cosine_sim = joblib.load('/model/cosine_sim.pkl')
 
 def get_recommendations(title):
     movie_index = df[df['title'] == title].index[0]
